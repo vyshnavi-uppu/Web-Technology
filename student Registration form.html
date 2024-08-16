@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+    <style>
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="number"], input[type="file"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Student Registration Form</h1>
+
+<form >
+    <fieldset>
+        <legend>Personal Details</legend>
+        
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+        
+        <label for="email">Email Address:</label>
+        <input type="text" id="email" name="email" required>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Document Upload</legend>
+        
+        <label for="sscCertificate">Upload 10th Grade Certificate:</label>
+        <input type="file" id="sscCertificate" name="sscCertificate" accept=".pdf,.jpg,.png" required>
+        
+        <label for="interCertificate">Upload Intermediate Certificate:</label>
+        <input type="file" id="interCertificate" name="interCertificate" accept=".pdf,.jpg,.png" required>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Previous Marks</legend>
+        
+        <label for="sscMarks">10th Grade Marks:</label>
+        <input type="number" id="sscMarks" name="sscMarks" required>
+        
+        <label for="interMarks">Intermediate Marks:</label>
+        <input type="number" id="interMarks" name="interMarks" required>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Course Enrollment</legend>
+       
+        <label for="course">Course to Enroll:</label>
+        <select id="course" name="course" required>
+            <option value="">Select a course</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Electrical Engineering">Electrical Engineering</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+            <option value="Business Administration">Business Administration</option>
+        </select>
+        
+        <label>Preferred Mode of Study:</label>
+        <input type="radio" id="fullTime" name="studyMode" value="Full-Time" required>
+        <label for="fullTime">Full-Time</label>
+        
+        <input type="radio" id="partTime" name="studyMode" value="Part-Time">
+        <label for="partTime">Part-Time</label>
+        
+        <label for="newsletter">Subscribe to Newsletter:</label>
+        <input type="checkbox" id="newsletter" name="newsletter" value="Yes">
+        <label for="newsletter">Yes</label>
+    </fieldset>
+    
+    <button type="submit">Register</button>
+</form>
+
+
+
+</body>
+</html>
